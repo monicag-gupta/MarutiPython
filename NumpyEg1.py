@@ -232,5 +232,32 @@ print("Imaginary part of the complex array:", imaginary_part)
 
 
 
+#numpy10
+
+import numpy as np
+
+# Generate numbers from 0 to 9 with step 1
+arr1 = np.arange(0, 10, 1)
+print("arange example:", arr1) # arange example: [0 1 2 3 4 5 6 7 8 9]
+
+# Generate numbers from 1 to 10 with step 2
+arr2 = np.arange(1, 10, 2)
+print("arange with step:", arr2) # arange with step: [1 3 5 7 9]
+
+# Generate 5 numbers between 0 and 1
+arr1 = np.linspace(0, 1, 5)
+print("linspace example:", arr1)  # linspace example: [0.   0.25 0.5  0.75 1.  ]
+
+# Generate 5 numbers between 0 and 1, excluding the endpoint
+arr2 = np.linspace(0, 1, 5, endpoint=False)
+print("linspace without endpoint:", arr2) # linspace without endpoint: [0.  0.2 0.4 0.6 0.8]
+
+# Generate 5 numbers and return the step size
+arr3, step = np.linspace(0, 10, 5, retstep=True)
+print("linspace with step size:", arr3, ", step:", step) 
+# linspace with step size: [ 0.  2.5  5.  7.5 10. ] , step: 2.5
+
+
+
 
 
