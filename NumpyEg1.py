@@ -64,3 +64,33 @@ complex_arr = np.array([1 + 2j, 3 + 4j, 5 + 6j])
 print("\nComplex Number Array:", complex_arr)
 print("Data type of the array:", complex_arr.dtype)
 
+
+
+
+
+#numpy4
+
+# NumPy supports converting data types 
+# You can define a custom dtype with multiple fields, similar to structs in C
+import numpy as np
+arr = np.array([1.1, 2.2, 3.3])
+print("Array: ", arr, "Data Type: ", arr.dtype) # float64
+
+# Convert to integer
+arr_int = arr.astype(np.int32)
+print("Array as Integer: ", arr_int, "Data Type: ", arr_int.dtype)   # int32
+
+# Define a structured data type
+person_dtype = np.dtype([('name', 'S10'), ('age', 'i4'), ('weight', 'f4')])
+
+# Create array
+people = np.array([
+    ('Alice', 25, 55.0),
+    ('Bob', 30, 72.5)
+], dtype=person_dtype)
+
+print(people[0])         # ('Alice', 25, 55.0)
+print(people['name'])    # [b'Alice' b'Bob']
+
+decoded_names = [name.decode('utf-8') for name in people['name']]
+print(decoded_names)     # ['Alice', 'Bob']
