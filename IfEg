@@ -1,0 +1,30 @@
+# if Statement Without else
+number = int(input("Enter a number: "))
+if number > 0:
+    print("The number is positive.")
+# No action if the number is not positive
+
+
+# Simple if...else
+number = int(input("Enter another number: "))
+
+if number % 2 == 0:
+    print(f"{number} is even.")
+else:
+    print(f"{number} is odd.")
+
+
+
+# Using if...elif...else
+score = int(input("Enter your score: "))
+
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+elif score >= 60:
+    print("Grade: D")
+else:
+    print("Grade: F")
