@@ -1,0 +1,13 @@
+Exercise: Write a Python program that prompts the user for his/her amount of money, then reports how many Courses the person can afford, and how much more money he/she will need to afford an additional Course.
+Import a python file which contains:
+Java=50000
+JEE=20000
+Spring=40000
+SpringBoot=60000
+Python=2000
+
+O/p:
+What is the amount in your pocket: 100000
+You can afford: Java, JEE, Python
+For Spring You need 10000 more
+For Spring and SpringBoot you need …
