@@ -173,4 +173,31 @@ print("Original Array: ", arr) # Original Array:  [10 20 30 40 50]
 
 
 
+#numpy8
+
+# Universal Functions (ufuncs): NumPy provides vectorized functions (ufuncs)
+# that can be applied element-wise to arrays.
+import numpy as np
+# Square root of each element
+arr = np.array([1, 4, 9, 16])
+result_sqrt = np.sqrt(arr)
+print("Square Root of Array:", result_sqrt) 
+# Exponentiation (e^x) of each element
+result_exp = np.exp(arr)
+print("\nExponentiation of Array:", result_exp)
+
+# Matrix Operations:
+# NumPy provides a range of matrix operations, including matrix multiplication and transpose.
+# Matrix Transpose
+arr_2d = np.array([[1, 2], [3, 4], [5, 6]])
+arr_transpose = arr_2d.T  # Transpose of the matrix
+print("\nTransposed Matrix:\n", arr_transpose)
+# Matrix multiplication
+arr_2d_1 = np.array([[1, 2], [3, 4]])
+arr_2d_2 = np.array([[5, 6], [7, 8]])
+arr_multiply = np.dot(arr_2d_1, arr_2d_2)
+print("Matrix Multiplication:\n", arr_multiply)
+
+
+
 
