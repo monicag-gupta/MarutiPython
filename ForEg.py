@@ -35,7 +35,23 @@ while(count<=31):
 
 print("Happy Working")
     
-    
+name=""
+while (True):
+    print("\n\n******Menu********")
+    print("1. Enter Name")
+    print("2. Display Name")
+    print("3. Exit")
+    ans=int(input("Enter choice:"))
+    if ans == 1:
+        name=input("Enter Name:")
+    elif ans == 2:
+        print("The name is ",name)
+    elif ans == 3:
+        break
+    else:
+        print("Incorrect choice!!")
+print("Menu Ends")
+  
     
 
 
