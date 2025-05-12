@@ -20,3 +20,21 @@ print("Ones Array:\n", arr_ones)
 # Creating an array with a range of numbers
 arr_range = np.arange(0, 10, 2)  # Numbers from 0 to 10 with a step of 2
 print("Range Array:", arr_range)
+
+
+#numpy2
+
+# You can reshape NumPy arrays to change their dimensions without changing the underlying data.
+# Reshaping a 1D array into a 2D array
+import numpy as np
+
+arr_1d = np.array([1, 2, 3, 4, 5, 6])
+
+arr_reshaped = arr_1d.reshape(2, 3)
+print("Reshaped Array:\n", arr_reshaped)
+
+# Output:
+# Reshaped Array:
+# [[1 2 3]
+# [4 5 6]]
+
