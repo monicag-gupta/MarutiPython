@@ -17,3 +17,25 @@ count = 1
 while count <= 5:
     print(count)
     count += 1
+print("\nWhile Loop with break and continue: ")
+
+count=0
+while(count<=31):
+    count = count+1
+    if(count==12):
+        print("12th is a holiday")
+        continue;
+    if(count % 7 == 1 or count % 7 == 6):
+        print(count,"weekend");
+    else:
+        print(count,"Weekday");
+    if(count==20):
+        print("20th is the last working day for this month")
+        break;
+
+print("Happy Working")
+    
+    
+    
+
+
