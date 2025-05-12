@@ -94,3 +94,27 @@ print(people['name'])    # [b'Alice' b'Bob']
 
 decoded_names = [name.decode('utf-8') for name in people['name']]
 print(decoded_names)     # ['Alice', 'Bob']
+
+
+
+
+#numpy5
+# NumPy supports element-wise operations such as addition, subtraction,
+# multiplication, and division, which can be applied to arrays directly
+# without the need for loops.
+import numpy as np
+
+# Element-wise addition
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+result_add = arr1 + arr2
+print("Addition Result:", result_add) # Addition Result: [5 7 9]
+
+# Element-wise multiplication
+result_multiply = arr1 * arr2
+print("Multiplication Result:", result_multiply) # Multiplication Result: [ 4 10 18]
+
+# Scalar operations (operation with a constant)
+result_scalar_add = arr1 + 10
+print("Scalar Addition Result:", result_scalar_add) # Scalar Addition Result: [11 12 13]
