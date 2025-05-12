@@ -148,3 +148,29 @@ print("2D Sliced Array:\n", arr_2d_slice)
 # 2D Sliced Array:
 # [[2 3]
 # [5 6]]
+
+
+
+
+
+
+#numpy7
+
+# Boolean indexing allows you to access array elements based on a condition.
+import numpy as np
+
+# Boolean indexing
+arr = np.array([10, 20, 30, 40, 50])
+condition = arr > 25
+print("Array: ", arr) # Array:  [10 20 30 40 50]
+print("Boolean Indexed Array:", arr[condition])
+# Boolean Indexed Array: [30 40 50]
+arr2 = arr[condition]
+print("Array Arr2:", arr2) # Array Arr2: [30 40 50]
+print("Original Array: ", arr) # Original Array:  [10 20 30 40 50]
+
+
+
+
+
+
