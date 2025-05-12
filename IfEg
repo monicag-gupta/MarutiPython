@@ -28,3 +28,23 @@ elif score >= 60:
     print("Grade: D")
 else:
     print("Grade: F")
+
+
+
+
+
+# Nested if...else
+age = int(input("Enter your age: "))
+if age >= 18:
+    if age >= 65:
+        print("You are a senior citizen.")
+    else:
+        print("You are an adult.")
+else:
+    print("You are a minor.")
+
+# Ternary Conditional Operator (Inline if...else)
+temperature = int(input("Enter the temperature: "))
+status = "Hot" if temperature > 30 else "Cold"
+print(f"The weather is {status}.")
+
