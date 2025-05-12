@@ -118,3 +118,33 @@ print("Multiplication Result:", result_multiply) # Multiplication Result: [ 4 10
 # Scalar operations (operation with a constant)
 result_scalar_add = arr1 + 10
 print("Scalar Addition Result:", result_scalar_add) # Scalar Addition Result: [11 12 13]
+
+
+
+
+
+#numpy6
+
+
+# You can access individual elements of a NumPy array using indices.
+# NumPy supports both 1D and 2D array indexing.
+import numpy as np
+
+# 1D Array Indexing
+arr = np.array([10, 20, 30, 40, 50])
+print("Element at index 2:", arr[2])  # Element at index 2: 30
+
+# 2D Array Indexing
+arr_2d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print("Element at row 1, column 2:", arr_2d[1, 2])  # Element at row 1, column 2: 6
+
+# Slicing in 1D Array
+arr_slice = arr[1:4]  # Extract elements from index 1 to 3
+print("Sliced Array:", arr_slice) # Sliced Array: [20 30 40]
+
+# Slicing in 2D Array
+arr_2d_slice = arr_2d[0:2, 1:3]  # Extract rows 0 to 1, columns 1 to 2
+print("2D Sliced Array:\n", arr_2d_slice)
+# 2D Sliced Array:
+# [[2 3]
+# [5 6]]
