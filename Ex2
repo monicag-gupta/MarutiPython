@@ -1,0 +1,9 @@
+Write a Python program that performs the following tasks:
+Create a dictionary of students and their respective scores.
+Add a new student and score to the dictionary.
+Update the score of an existing student.
+Delete a student from the dictionary.
+Calculate the average score of all students.
+Find the highest and lowest score and the student(s) associated with those scores.
+Sort the dictionary by student names and by scores.
+Print the dictionary in a readable format.
