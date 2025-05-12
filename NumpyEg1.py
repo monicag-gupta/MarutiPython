@@ -201,3 +201,36 @@ print("Matrix Multiplication:\n", arr_multiply)
 
 
 
+
+#numpy9
+
+# NumPy allows performing various operations on complex number arrays. # Some of these operations include addition, subtraction, multiplication, # and accessing real and imaginary parts of the complex numbers.
+# Arithmetic Operations with Complex Numbers # Perform arithmetic operations on complex numbers
+import numpy as np
+arr1 = np.array([1 + 2j, 3 + 4j, 5 + 6j])
+arr2 = np.array([2 + 3j, 4 + 5j, 6 + 7j])
+# Addition
+result_add = arr1 + arr2
+print("\nAddition of complex arrays:", result_add)
+# Subtraction
+result_subtract = arr1 - arr2
+print("\nSubtraction of complex arrays:", result_subtract) 
+# Multiplication
+result_multiply = arr1 * arr2
+print("\nMultiplication of complex arrays:", result_multiply)
+# Division
+result_divide = arr1 / arr2
+print("\nDivision of complex arrays:", result_divide)
+# Accessing Real and Imaginary Parts of Complex Numbers
+# You can access the real and imaginary parts of complex numbers using .real and .imag.
+real_part = arr1.real
+imaginary_part = arr1.imag
+print("\nReal part of the complex array:", real_part)
+print("Imaginary part of the complex array:", imaginary_part)
+
+
+
+
+
+
+
