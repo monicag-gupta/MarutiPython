@@ -76,6 +76,30 @@ plt.show()
 # You can customize the chart by setting colors, adding titles, and adjusting labels.
 
 
+########
+
+# Scatter plots are used to display the relationship between two continuous variables.
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generating random data. Generates 50 random values between 0 and 1.
+x = np.random.rand(50)
+y = np.random.rand(50)
+print(f"x:\n{x}\ny:\n{y}")
+
+# Plotting a scatter plot. Plots the data as points on a scatter plot.
+# alpha=0.7 means the points will be 70% opaque, so they are somewhat transparent.
+plt.scatter(x, y, color='red', alpha=0.7)
+
+# Adding titles and labels
+plt.title('Scatter Plot Example')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+
+# Displaying the plot
+plt.show()
+
 
 
 
