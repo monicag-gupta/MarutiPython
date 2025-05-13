@@ -158,6 +158,35 @@ plt.show()
 
 
 
+####
+
+# Pair plots are used to visualize relationships between all pairs of variables in a dataset.
+
+import seaborn as sns
+import pandas as pd
+from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
+
+# Loading Iris dataset
+iris = load_iris()
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+df['Species'] = iris.target
+pd.set_option('display.max_columns', None); pd.set_option('display.max_rows', None)
+print(df)
+pd.reset_option('display.max_columns'); pd.reset_option('display.max_rows')
+
+# Plotting a pair plot
+sns.pairplot(df, hue='Species', palette='coolwarm')
+# Creates a pair plot for the dataset
+# hue='Species': This argument will color the data points by the 'Species' column in the DataFrame, allowing you to visualize how the data points from different species are distributed across the scatter plots.
+# palette='coolwarm': This specifies the color palette to be used for the hue. The 'coolwarm' palette is a gradient of colors from blue (cool) to red (warm).
+
+# Displaying the plot
+plt.show()
+
+
+
+
 
 
 
