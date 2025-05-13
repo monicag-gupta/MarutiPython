@@ -131,6 +131,32 @@ plt.show()
 
 
 
+#####
+
+# Heatmaps are used to represent matrix-like data where values are encoded as colors. This is useful when visualizing correlations between variables or patterns in large datasets.
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+# Generating random data
+data = np.random.rand(10, 10)
+print(data)
+
+# Plotting a heatmap. 
+sns.heatmap(data, annot=True, cmap='YlGnBu')
+# Creates the heatmap using seaborn (which is built on top of matplotlib).
+# cmap='YlGnBu': Specifies the color map
+# annot=True: Annotates the heatmap cells with values.
+
+# Adding titles and labels
+plt.title('Heatmap Example')
+
+# Displaying the plot
+plt.show()
+
+
+
 
 
 
