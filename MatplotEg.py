@@ -188,6 +188,105 @@ plt.show()
 
 
 
+#######
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+def line_chart():
+    x = np.arange(1, 11)
+    y = np.array([2*i for i in x])
+    plt.plot(x, y, marker='o', linestyle='-', color='blue')
+    plt.title("Line Chart")
+    plt.xlabel("X values")
+    plt.ylabel("2 * X")
+    plt.grid(True)
+    plt.show()
+
+def bar_chart():
+    categories = ['A', 'B', 'C', 'D']
+    values = [23, 45, 56, 78]
+    plt.bar(categories, values, color='green')
+    plt.title("Bar Chart")
+    plt.xlabel("Categories")
+    plt.ylabel("Values")
+    plt.show()
+
+def histogram():
+    data = np.random.randn(1000)
+    plt.hist(data, bins=30, color='skyblue', edgecolor='black')
+    plt.title("Histogram")
+    plt.xlabel("Value")
+    plt.ylabel("Frequency")
+    plt.show()
+
+def pie_chart():
+    labels = ['Python', 'Java', 'C++', 'Ruby']
+    sizes = [40, 30, 20, 10]
+    colors = ['gold', 'lightgreen', 'lightcoral', 'lightskyblue']
+    plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
+    plt.title("Pie Chart")
+    plt.axis('equal')
+    plt.show()
+
+def scatter_plot():
+    x = np.random.rand(50)
+    y = np.random.rand(50)
+    colors = np.random.rand(50)
+    sizes = 100 * np.random.rand(50)
+    plt.scatter(x, y, s=sizes, c=colors, alpha=0.5, cmap='viridis')
+    plt.title("Scatter Plot")
+    plt.xlabel("X Axis")
+    plt.ylabel("Y Axis")
+    plt.colorbar()
+    plt.show()
+
+def box_plot():
+    data = [np.random.normal(0, std, 100) for std in range(1, 4)]
+    plt.boxplot(data, patch_artist=True)
+    plt.title("Box Plot")
+    plt.xlabel("Data Set")
+    plt.ylabel("Value")
+    plt.show()
+
+def menu():
+    while True:
+        print("\n--- Matplotlib Diagram Menu ---")
+        print("1. Line Chart")
+        print("2. Bar Chart")
+        print("3. Histogram")
+        print("4. Pie Chart")
+        print("5. Scatter Plot")
+        print("6. Box Plot")
+        print("7. Exit")
+        
+        choice = input("Enter your choice (1-7): ")
+        
+        if choice == '1':
+            line_chart()
+        elif choice == '2':
+            bar_chart()
+        elif choice == '3':
+            histogram()
+        elif choice == '4':
+            pie_chart()
+        elif choice == '5':
+            scatter_plot()
+        elif choice == '6':
+            box_plot()
+        elif choice == '7':
+            print("Exiting program.")
+            break
+        else:
+            print("Invalid choice. Please enter a number from 1 to 7.")
+
+# Run the menu
+menu()
+
+
+
+
+
 
 
 
