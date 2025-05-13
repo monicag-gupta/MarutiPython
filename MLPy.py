@@ -28,3 +28,33 @@ prediction = knn.predict(new_data)
 # Output : Predicted class: 0
 print("Predicted class:", prediction[0]) 
 
+
+
+
+
+
+#######
+
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.datasets import load_iris
+from sklearn.metrics import accuracy_score
+# Load the Iris dataset
+iris = load_iris()
+# Features (X) and labels (y)
+X = iris.data  # Features (sepal length, sepal width, petal length, petal width)
+y = iris.target  # Labels (species)
+# Split the data into training and testing sets (80% training, 20% testing)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Create a KNN classifier with 3 neighbors
+knn = KNeighborsClassifier(n_neighbors=3)
+# Train the KNN classifier
+knn.fit(X_train, y_train)
+# Make predictions on the test set
+y_pred = knn.predict(X_test)
+# Evaluate the model using accuracy score
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy of KNN classifier: {accuracy * 100:.2f}%")
+
+
