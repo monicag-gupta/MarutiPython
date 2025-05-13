@@ -1,0 +1,44 @@
+# A Series is a one-dimensional labeled array capable of holding any data type.
+import pandas as pd
+import numpy as np
+
+# Create a Series from a list
+data = [10, 20, 30, 40]
+s = pd.Series(data)
+print("Series with default index:");print(s)
+
+# Create a Series with custom index
+s2 = pd.Series([100, 200, 300], index=['a', 'b', 'c'])
+print("\nSeries with custom index:");print(s2)
+
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [25, 30, 35],
+    'Salary': [50000, 60000, 70000]
+}
+df = pd.DataFrame(data) # Create a DataFrame from a dictionary
+print("\nDataFrame from dictionary:");print(df)
+
+data = [
+    {'Name': 'Alice', 'Age': 25, 'Salary': 50000},
+    {'Name': 'Bob', 'Age': 30, 'Salary': 60000},
+    {'Name': 'Charlie', 'Age': 35, 'Salary': 70000}
+]
+df = pd.DataFrame(data)
+print("\nDataFrame from list of dicts:");print(df)
+
+data = [
+    ['Alice', 25, 50000],
+    ['Bob', 30, 60000],
+    ['Charlie', 35, 70000]
+]
+columns = ['Name', 'Age', 'Salary']
+df = pd.DataFrame(data, columns=columns)
+print("\nDataFrame from list of lists:");print(df)
+
+array = np.array([[1, 2], [3, 4]])
+df = pd.DataFrame(array, columns=['Col1', 'Col2'])
+print("\nDataFrame from NumPy array:");print(df)
+
+
+
