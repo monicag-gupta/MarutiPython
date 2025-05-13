@@ -149,6 +149,77 @@ print(df_sorted)
 
 
 
+#pandas4
+
+import myFn1 as fn
+import math
+
+var =int(input("Enter a number:"))
+# print("The square of",i,"is :",fn.square(i))
+# print("The squareroot of",i,"is :",fn.squareroot(i))
+
+# fn.table(i)
+
+# print("The square of",i,"is :",(lambda x:x*x)(i))
+
+# print("The squareroot of",i,"is :",(lambda x:math.sqrt(x))(i))
+
+
+
+print("\nTable of",var,":")
+for i in range(1,11):
+    (lambda x: print(x,"x",i,"=",(i*x)))(var))
+ 
+
+
+
+
+#myFn1
+
+import math
+def square(x):
+    return x*x
+
+def squareroot(x):
+    return math.sqrt(x)
+
+def table(x):
+    print("\nTable of",x,":")
+    for i in range(1,11):
+        print(x,"x",i,"=",(i*x))
+
+
+
+
+#myFn2
+
+
+def fn(s):
+    return "High" if s >= 60000 else "Low"
+
+
+listSal=[60000,70000,6000,3000,100000,5600]
+listSalCategory=[]
+
+for sal in listSal:
+    #category=fn(sal)
+    category=(lambda s: "High" if s >= 60000 else "Low") (sal)
+    print("for",sal,"Category is",category)
+    # listSalCategory.append(lambda s:"High" if s >= 60000 else "Low")(sal))
+    listSalCategory.append(category)
+print("Original salary list: ")
+print(listSal)
+print("Salary Category:")
+print(listSalCategory)
+
+
+
+
+
+
+
+
+
 
 
 
