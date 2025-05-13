@@ -112,3 +112,38 @@ plt.grid(True)
 plt.show()
 
 
+
+
+
+####
+
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+# Sample data: Years of Experience vs Salary
+X = np.array([[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]])  # Feature
+y = np.array([30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000])  # Target
+
+# Create and train model
+model = LinearRegression()
+model.fit(X, y)
+
+# Predict salary for 6.5 years of experience
+experience = np.array([[6.5]])
+predicted_salary = model.predict(experience)
+print(f"Predicted salary for 6.5 years experience: ₹{predicted_salary[0]:.2f}")
+
+# --- Visualization ---
+plt.scatter(X, y, color='blue', label='Actual Data')
+plt.plot(X, model.predict(X), color='red', label='Regression Line')
+plt.scatter(experience, predicted_salary, color='green', marker='x', s=100, label='Predicted Point')
+
+plt.xlabel("Years of Experience")
+plt.ylabel("Salary")
+plt.title("Linear Regression: Experience vs Salary")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+
