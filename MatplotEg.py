@@ -104,5 +104,35 @@ plt.show()
 
 
 
+######
+
+# Box plots (or box-and-whisker plots) are useful for visualizing the spread and skewness of data, showing the median, quartiles, and outliers.
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generating random data
+data = np.random.randn(100)
+print(data)
+
+# Plotting a box plot
+plt.boxplot(data, vert=False)
+# Creates a box plot of the data. Vertical=false.
+# The horizontal lines in the box plot represent the median, while the box shows the interquartile range (IQR).
+
+# Adding titles and labels
+plt.title('Box Plot Example')
+plt.xlabel('Value')
+
+# Displaying the plot
+plt.show()
+
+
+
+
+
+
+
+
 
 
