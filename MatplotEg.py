@@ -51,3 +51,34 @@ plt.show() # The plot is displayed using plt.show().
 
 
 
+#####
+
+# Bar charts are used to display categorical data and are typically used to compare values across different categories.
+
+import matplotlib.pyplot as plt
+
+# Data for the bar chart
+categories = ['A', 'B', 'C', 'D', 'E']
+values = [23, 45, 56, 78, 33]
+
+# Plotting a bar chart
+plt.bar(categories, values, color='lightgreen')
+# Plots the bars using the given categories and their corresponding values.
+
+# Adding titles and labels
+plt.title('Bar Chart Example')
+plt.xlabel('Categories')
+plt.ylabel('Values')
+
+# Displaying the plot
+plt.show()
+
+# You can customize the chart by setting colors, adding titles, and adjusting labels.
+
+
+
+
+
+
+
+
