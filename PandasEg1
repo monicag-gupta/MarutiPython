@@ -42,3 +42,39 @@ print("\nDataFrame from NumPy array:");print(df)
 
 
 
+
+
+
+
+
+#pandas2
+
+
+import pandas as pd
+
+# Create a simple Series
+fruits = pd.Series(["Apple", "Banana", "Cherry"])
+print("Series Example:\n", fruits)
+
+# Create a simple DataFrame
+data = {
+    "Name": ["Alice", "Bob", "Charlie"],
+    "Age": [25, 30, 35],
+    "City": ["New York", "Los Angeles", "Chicago"]
+}
+df = pd.DataFrame(data)
+print("\nDataFrame Example:\n", df)
+
+# Access a single column (Series) from the DataFrame
+print("\nAccessing 'Name' column:\n", df["Name"])
+
+# Access a single row
+print("\nAccessing the first row:\n", df.iloc[0])
+
+# Add a new column to the DataFrame
+df["Salary"] = [50000, 60000, 70000]
+print("\nDataFrame after adding a 'Salary' column:\n", df)
+
+
+
+
