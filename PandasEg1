@@ -78,3 +78,77 @@ print("\nDataFrame after adding a 'Salary' column:\n", df)
 
 
 
+#pandas3
+# Importing the necessary libraries
+import pandas as pd
+import numpy as np
+
+# Step 1: Create a sample dataset
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David', np.nan, 'Alice'],
+    'Age': [25, 30, np.nan, 40, 28, 25],
+    'City': ['New York', 'Los Angeles', 'Chicago', np.nan, 'Houston', 'New York'],
+    'Salary': [50000, 60000, 70000, np.nan, 80000, 50000]
+}
+
+# Convert the dictionary into a Pandas DataFrame
+df = pd.DataFrame(data)
+print("Initial DataFrame:")
+print(df)
+
+# Step 2: Handle missing values
+df['Name'] = df['Name'].fillna('Unknown')  # Fill missing names with 'Unknown'
+df['City'] = df['City'].fillna('Unknown')  # Fill missing cities with 'Unknown'
+df['Age'] = df['Age'].fillna(df['Age'].mean())  # Fill missing ages with mean value
+df['Salary'] = df['Salary'].fillna(0)  # Fill missing salaries with 0
+print("\nDataFrame after handling missing values:")
+print(df)
+
+# Step 3: Remove duplicates
+df = df.drop_duplicates()
+print("\nDataFrame after removing duplicates:")
+print(df)
+
+# Step 4: Adding new columns
+df['Tax'] = df['Salary'] * 0.10  # Add a column for tax deduction (10% of Salary)
+df['Net Salary'] = df['Salary'] - df['Tax']  # Add a column for net salary
+print("\nDataFrame after adding new columns:")
+print(df)
+
+# Step 5: Renaming columns
+df = df.rename(columns={'Net Salary': 'Take-Home-Salary'})
+print("\nDataFrame after renaming columns:")
+print(df)
+
+# Step 6: Selecting specific columns
+selected_columns = df[['Name', 'Salary']]
+print("\nSelected Columns (Name and Salary):")
+print(selected_columns)
+
+# Step 7: Selecting specific rows (Filtering data)
+high_salary = df[df['Salary'] > 50000]
+print("\nRows where Salary > 50,000:")
+print(high_salary)
+
+# Step 8: Row selection using indexing
+first_two_rows = df.iloc[:2]  # Select the first two rows
+print("\nFirst Two Rows:")
+print(first_two_rows)
+
+# Step 9: Applying a function to a column
+df['Salary Category'] = df['Salary'].apply(lambda x: 'High' if x > 60000 else 'Low')
+print("\nDataFrame after applying a function to categorize salaries:")
+print(df)
+
+# Step 10: Sorting data by Age
+df_sorted = df.sort_values(by='Age')
+print("\nDataFrame sorted by Age:")
+print(df_sorted)
+
+
+
+
+
+
+
+
