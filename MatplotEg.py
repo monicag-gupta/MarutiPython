@@ -23,3 +23,31 @@ pip install seaborn
 
 
 
+
+
+#####
+
+
+# Histograms are used to show the distribution of a dataset. It divides the data into bins and shows the frequency of data points in each bin.
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generating random data
+data = np.random.randn(1000)
+# Generates 1000 random values from a standard normal distribution (mean=0, std=1).
+
+# Plotting a histogram # Creates a histogram with 30 bins.
+plt.hist(data, bins=30, color='skyblue', edgecolor='black')
+
+# Adding titles and labels
+plt.title('Histogram of Random Data')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+
+# Displaying the plot
+plt.show() # The plot is displayed using plt.show().
+
+
+
+
